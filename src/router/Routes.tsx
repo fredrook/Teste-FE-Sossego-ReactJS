@@ -11,7 +11,7 @@ const RoutesMain = () => {
       <Route path="/" element={<HomePage />} />
       <Route path="/register" element={<UserCreation />} />
       <Route element={<ProtectedRoutes />}>
-        <Route path="/Dashboard" element={<Dashboard />} />
+        <Route path="/dashboard" element={<Dashboard />} />
       </Route>
     </Routes>
   );

@@ -8,9 +8,7 @@ export const ContainerRA = styled.div`
   max-width: 85%;
 
   position: relative;
-  top: 16%;
-
-  background-color: orange;
+  top: 18%;
 
   .labelCep {
     position: relative;
@@ -27,7 +25,7 @@ export const ContainerRA = styled.div`
     top: 1%;
     left: 0%;
 
-    width: 370px;
+    width: 390px;
     height: 44px;
 
     font-size: 16px;
@@ -51,9 +49,9 @@ export const ContainerRA = styled.div`
   #rua {
     position: relative;
     top: -13.6%;
-    left: 54.4%;
+    left: 52%;
 
-    width: 370px;
+    width: 390px;
     height: 44px;
 
     font-size: 16px;
@@ -64,7 +62,7 @@ export const ContainerRA = styled.div`
     border-radius: 4px;
   }
 
-  .labelNumero {
+  .labelNumero {  
     position: relative;
     top: -9%;
     left: 0%;
@@ -79,7 +77,7 @@ export const ContainerRA = styled.div`
     top: -7.5%;
     left: 0%;
 
-    width: 199px;
+    width: 185px;
     height: 44px;
 
     font-size: 16px;
@@ -106,7 +104,7 @@ export const ContainerRA = styled.div`
     top: -22%;
     left: 25%;
 
-    width: 199px;
+    width: 185px;
     height: 44px;
 
     font-size: 16px;
@@ -119,8 +117,8 @@ export const ContainerRA = styled.div`
 
   .labelCidade {
     position: relative;
-    top: 0%;
-    left: 0%;
+    top: -38%;
+    left: 52%;
 
     font-weight: 500;
     font-size: 16px;
@@ -129,10 +127,10 @@ export const ContainerRA = styled.div`
 
   #cidade {
     position: relative;
-    top: 0%;
-    left: 0%;
+    top: -37%;
+    left: 52%;
 
-    width: 370px;
+    width: 390px;
     height: 44px;
 
     font-size: 16px;
@@ -145,7 +143,7 @@ export const ContainerRA = styled.div`
 
   .labelPontoReferencia {
     position: relative;
-    top: 0%;
+    top: -30%;
     left: 0%;
 
     font-weight: 500;
@@ -155,7 +153,7 @@ export const ContainerRA = styled.div`
 
   #pontoRef {
     position: relative;
-    top: 0%;
+    top: -29%;
     left: 0%;
 
     width: 812px;
@@ -175,6 +173,7 @@ export const ContainerRA = styled.div`
     justify-content: flex-end;
 
     position: relative;
+    top: -3%;
     left: 6%;
 
     .btn1 {
