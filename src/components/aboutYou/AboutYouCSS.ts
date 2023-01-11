@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const ContainerAY = styled.div`
+export const ContainerAY = styled.form`
   display: flex;
   flex-direction: column;
 

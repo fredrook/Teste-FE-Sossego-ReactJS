@@ -5,11 +5,11 @@ import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { IUser } from "../../interfaces/IUser";
-/* import { toast } from "react-toastify"; */
+import { toast } from "react-toastify";
 
 const schema = yup.object({
   cep: yup.string().required("Cep obrigatório!"),
-  rua: yup.string().email().required("Rua obrigatório!"),
+  rua: yup.string().required("Rua obrigatório!"),
   numero: yup.string().required("Número obrigatório!"),
   bairro: yup.string().required(),
   cidade: yup.string().required("Cidade obrigatório!"),
@@ -18,12 +18,32 @@ const schema = yup.object({
 
 const RegistrationAdressModal = () => {
   const {
-    register,
+    register, handleSubmit,
     formState: { errors },
   } = useForm<IUser>({ resolver: yupResolver(schema) });
 
+   const { setNext } = useContext(UserContext);
+
+  function Another() {
+    toast.success("Sucesso, próximo passo!", {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
+    setNext("aboutyou");
+  }
+
+  function Back() {
+    setNext("");
+  }
+
+
   return (
-    <ContainerRA>
+    <ContainerRA onSubmit={handleSubmit(Another)}>
       <label htmlFor="cep" className="labelCep">
         CEP
       </label>
@@ -55,8 +75,8 @@ const RegistrationAdressModal = () => {
       <input type="text" id="pontoRef" {...register("pontoRef")} />
       <span>{errors.pontoRef?.message}</span>
       <div className="ContainerButtons">
-        <button className="btn1">Anterior</button>
-        <button className="btn2">Próximo passo</button>
+        <button type="button" onClick={() => Back()} className="btn1">Anterior</button>
+        <button type="submit" className="btn2">Próximo passo</button>
       </div>
     </ContainerRA>
   );

@@ -4,11 +4,11 @@ import {
   DivInputs,
 } from "./UserIdentificationCSS";
 import { useForm } from "react-hook-form";
-/* import { useContext } from "react";
-import { UserContext } from "../../context/AuthContext"; */
+import { useContext } from "react";
+import { UserContext } from "../../context/AuthContext";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
-/* import { toast } from "react-toastify"; */
+import { toast } from "react-toastify";
 import { IUser } from "../../interfaces/IUser";
 
 const schema = yup.object({
@@ -26,19 +26,35 @@ const schema = yup.object({
     .oneOf([yup.ref("password"), null], "Passwords must match")
     .required(),
   dataNascimento: yup
-    .date()
+    .string()
     .min(10, "Favor inserir a data de nascimento.")
     .required(),
 });
 
 const UserIdentificationModal = () => {
   const {
-    register,
+    register, handleSubmit,
     formState: { errors },
   } = useForm<IUser>({ resolver: yupResolver(schema) });
 
+  const { setNext } = useContext(UserContext);
+
+  function NextOne() {
+    toast.success("Sucesso, próximo passo!", {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
+    setNext("register");
+    
+  }
+
   return (
-    <ContainerUI>
+    <ContainerUI onSubmit={handleSubmit(NextOne)}>
       <label htmlFor="name" className="labelName">
         Nome
       </label>
@@ -49,13 +65,13 @@ const UserIdentificationModal = () => {
         <label htmlFor="password" className="labelPassword">
           Senha
         </label>
-        <input type="text" id="password" {...register("password")} />
+        <input type="password" id="password" {...register("password")} />
         <span>{errors.password?.message}</span>
         <label htmlFor="confirmPassword" className="labelConfPassword">
           Confirmar Senha
         </label>
         <input
-          type="text"
+          type="password"
           id="confirmPassword"
           {...register("confirmPassword")}
         />
@@ -79,7 +95,9 @@ const UserIdentificationModal = () => {
         <span>{errors.dataNascimento?.message}</span>
       </AnotherDivInputs>
 
-      <button className="btnNext">Próximo passo</button>
+      <button type="submit" className="btnNext">
+        Próximo passo
+      </button>
     </ContainerUI>
   );
 };

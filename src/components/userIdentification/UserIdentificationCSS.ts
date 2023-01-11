@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const ContainerUI = styled.div`
+export const ContainerUI = styled.form`
   display: flex;
   flex-direction: column;
   justify-content: space-around;

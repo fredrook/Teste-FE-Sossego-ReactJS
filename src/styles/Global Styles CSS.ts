@@ -8,6 +8,7 @@ const GlobalStyle = createGlobalStyle`
     --color-grey50:           #F8FAFB;
     --color-grey100:          #F0F2F6;
     --color-grey400:          #8C98A9;
+    --color-green:            #00AE63;
   }
 
   @media (min-width: 700px) {
@@ -48,8 +49,16 @@ const GlobalStyle = createGlobalStyle`
     }
   }
 
+  .Toastify__toast-body{
+    font-size: 3em;
+    font-weight: 500;
+  }
 
-  h1, h2, h3, h4, p, span{
+  input{
+    padding: 10px;
+  }
+
+  h1, h2, h3, h4, p, span, div{
     font-family: 'Poppins';
     font-style: normal;
   }
