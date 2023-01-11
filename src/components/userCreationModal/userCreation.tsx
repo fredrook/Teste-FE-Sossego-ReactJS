@@ -4,6 +4,7 @@ import { AiTwotoneHome } from "react-icons/ai";
 import { RiFileTextFill } from "react-icons/ri";
 import UserIdentificationModal from "../userIdentification/UserIdentification";
 import RegistrationAdressModal from "../registrationAddress/RegistrationAdress";
+import AboutYouModal from "../aboutYou/AboutYou";
 
 const UserCreation = () => {
   return (
@@ -26,7 +27,8 @@ const UserCreation = () => {
             <p className="p3">Sobre Você</p>
           </div>
           {/* <UserIdentificationModal/> */}
-          <RegistrationAdressModal/>
+          {/* <RegistrationAdressModal/> */}
+          {/* <AboutYouModal /> */}
         </div>
       </div>
     </ContainerUC>
