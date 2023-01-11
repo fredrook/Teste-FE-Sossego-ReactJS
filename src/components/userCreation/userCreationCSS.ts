@@ -1,6 +1,10 @@
 import styled from "styled-components";
 
-export const ContainerUC = styled.div`
+interface IconsProps {
+  next: string;
+}
+
+export const ContainerUC = styled.div<IconsProps>`
   display: flex;
 
   width: 100vw;
@@ -74,7 +78,26 @@ export const ContainerUC = styled.div`
           .icons {
             width: 24px;
             height: 24px;
-            color: var(--color-grey400);
+          }
+          .icon1 {
+            color: ${(props) =>
+              props.next === ""
+                ? "var(--color-primary)"
+                : "var(--color-green)"};
+          }
+          .icon2 {
+            color: ${(props) =>
+              props.next === ""
+                ? "var(--color-grey400)"
+                : props.next === "register"
+                ? "var(--color-primary)"
+                : "var(--color-green)"};
+          }
+          .icon3 {
+            color: ${(props) =>
+              props.next === "" || props.next === "register"
+                ? "var(--color-grey400)"
+                : "var(--color-primary)"};
           }
         }
         .p1 {

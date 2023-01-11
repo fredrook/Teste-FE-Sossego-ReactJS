@@ -1,20 +1,23 @@
 import { useContext } from "react";
+import CardUsers from "../../components/cardUsers/CardUsers";
 import { UserContext } from "../../context/AuthContext";
-import { Container } from "./DashboardCSS";
+import { IUser } from "../../interfaces/IUser";
+import { ContainerDashb } from "./DashboardCSS";
 
 const Dashboard = () => {
-  const { register } = useContext(UserContext);
+  const { user } = useContext(UserContext);
 
   return (
-    <>
-      {register && (
-        <Container>
-          
-      </Container>
-      )}
-    </>
-  
-  )
+    <ContainerDashb >
+      <div className="divSubContainer" >
+        <ul>
+          {user.map((elem: IUser, index: number) => (
+            <CardUsers key={index} userValue={elem} />
+          ))}
+        </ul>
+      </div>
+    </ContainerDashb>
+  );
 };
 
 export default Dashboard;

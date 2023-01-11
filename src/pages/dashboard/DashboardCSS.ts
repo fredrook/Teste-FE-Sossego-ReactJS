@@ -1,15 +1,23 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
-display: flex;
-justify-content: center;
-align-items: center;
-width: 100vw;
-height: 100vh;
+export const ContainerDashb = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 
-h1{
-    font-size: 5em;
-    font-weight: 500;
-    color: red;
-}
-`
+  width: 100vw;
+  height: 100vh;
+
+  background-color: var(--color-grey50);
+
+  .divSubContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 50%;
+    height: 100vh;
+
+    background-color: var(--color-grey100);
+  }
+`;

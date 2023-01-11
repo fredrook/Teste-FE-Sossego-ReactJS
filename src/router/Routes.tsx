@@ -1,5 +1,5 @@
 import { Route, Routes, Navigate } from "react-router-dom";
-import UserCreation from "../components/userCreationModal/userCreation";
+import UserCreation from "../components/userCreation/userCreation";
 import Dashboard from "../pages/dashboard/Dashboard";
 import HomePage from "../pages/homePage/HomePage";
 import ProtectedRoutes from "./ProtectRoutes/ProtectedRoutes";

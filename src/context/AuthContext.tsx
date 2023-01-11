@@ -6,9 +6,9 @@ import { IUser } from "../interfaces/IUser";
 export const UserContext = createContext<IProviderProps>({} as IProviderProps);
 
 const AuthContext = ({ children }: IContextProvider) => {
-  const [user, setUser] = useState<IUser>({} as IUser);
+  const [user, setUser] = useState<IUser[]>({} as IUser[]);
 
-  const [visible, setIsVisible] = useState(false);
+  const [next, setNext] = useState("");
 
   const [register, setIsRegister] = useState(false);
 
@@ -16,7 +16,7 @@ const AuthContext = ({ children }: IContextProvider) => {
 
   return (
     <UserContext.Provider
-      value={{ user, loading, visible, setIsVisible, register, setIsRegister }}
+      value={{ user, loading, setLoading, next, setNext, register, setIsRegister }}
     >
       {children}
     </UserContext.Provider>
