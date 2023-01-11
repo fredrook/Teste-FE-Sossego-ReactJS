@@ -4,7 +4,6 @@
 
 </div>
 <h1 style='color: #00A48B'>Test Front End Sossego</h1>
-<h2 style='color: #00A48B'>Projeto Front-End feito em ReactJS concatenando mais Techs e etc!</h2>
 
 <p>Projeto feito para inserir novos usúarios, com intuito de utilizar somente conceito de context, sem consumo de API's.
 
