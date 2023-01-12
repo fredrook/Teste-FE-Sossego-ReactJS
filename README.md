@@ -14,7 +14,8 @@ A biblioteca para estilização é de livre escolha
 Todos os campos deverão possuir validações.
 O teste deverá ser entregue com o link para o repositório do Github" </p>
 
-Todo o projeto foi feito em ReactJS + TypeScript, utilzando conceitos de Componentização, Pages e Styled Components, Routas e Rota protegida ademais concatenando o uso de ferramentas como Figma, GitHub e libs como React Toast e etc. </p>
+<p>Todo o projeto foi feito em ReactJS + TypeScript, utilzando conceitos de Componentização, Pages e Styled Components, Routas e Rota protegida ademais concatenando o uso de ferramentas como Figma, GitHub e libs como React Toast e etc.</p>
+</p>
 
 </details>
 
