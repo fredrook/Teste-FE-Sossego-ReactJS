@@ -16,6 +16,12 @@ const GlobalStyle = createGlobalStyle`
       font-size: 62.5%;
     }
   }
+
+  @media (max-width: 699px) {
+    :root {
+      font-size: 42.5%;
+    }
+  }
   
   * {
     margin: 0;
