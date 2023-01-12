@@ -9,7 +9,7 @@
 <h2> Introdução</h2>
 <p>Projeto feito para inserir novos usúarios, com intuito de utilizar somente conceito de context, sem consumo de API's.
 
-Como linha de raciocinio adotada, as instruçõs diziam: <p style='color: #ff0c24'>"Para as implementações da tela abaixo, esperamos alguns requisitos:
+Como linha de raciocinio adotada, as instruções diziam: <p style='color: #ff0c24'>"Para as implementações da tela abaixo, esperamos alguns requisitos:
 A aplicação precisa ser desenvolvida em ReactJs
 Todas as informações de formulário deverão ser armazenadas em um contexto para a exibição como mostrado na última tela
 A biblioteca para estilização é de livre escolha
