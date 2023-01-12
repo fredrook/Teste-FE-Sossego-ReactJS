@@ -6,8 +6,15 @@
 <h1 style='color: #00A48B'>Test Front End Sossego</h1>
 
 <p>Projeto feito para inserir novos usúarios, com intuito de utilizar somente conceito de context, sem consumo de API's.
+Como linha de raciocinio adotada, as instruçõs diziam:
+<p style='color: #ff0c24'>"Para as implementações da tela abaixo, esperamos alguns requisitos:
+A aplicação precisa ser desenvolvida em ReactJs
+Todas as informações de formulário deverão ser armazenadas em um contexto para a exibição como mostrado na última tela
+A biblioteca para estilização é de livre escolha
+Todos os campos deverão possuir validações.
+O teste deverá ser entregue com o link para o repositório do Github" </p>
 
-Todo o projeto foi feito em ReactJS + TypeScript, utilzando conceitos de Componentização, Pages e Styled Components, Routas e Rota protegida ademais concatenando o uso de ferramentas como Vercel, Figma, GitHub e libs como React Toast e etc. </p>
+Todo o projeto foi feito em ReactJS + TypeScript, utilzando conceitos de Componentização, Pages e Styled Components, Routas e Rota protegida ademais concatenando o uso de ferramentas como Figma, GitHub e libs como React Toast e etc. </p>
 
 </details>
 
