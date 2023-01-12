@@ -7,25 +7,19 @@
 
 
 <p>Projeto feito para inserir novos usúarios, com intuito de utilizar somente conceito de context, sem consumo de API's.
-9
-Como linha de raciocinio adotada, as instruçõs diziam: <p style='color: #ff0c24'>"Para as implementações da tela abaixo, esperamos alguns requisitos:
-11
-A aplicação precisa ser desenvolvida em ReactJs
-12
-Todas as informações de formulário deverão ser armazenadas em um contexto para a exibição como mostrado na última tela
-13
-A biblioteca para estilização é de livre escolha
-14
-Todos os campos deverão possuir validações.
-15
-O teste deverá ser entregue com o link para o repositório do Github" </p>
-Baseado nas informações passadas e nas imagens do Figma, realizei uma página de entrada da empresa, que ao clicar, leva ao cadastro do user, em maior analise, notei que o projeto abre margem de interpretação, podendo ou não cadastrar mais de um usúario, contudo é notado que na pagina de renderização do cadastro, mostra sempre 1 card, que é o realizado pela propria pessoa, assim implementei uma lógica onde pego somente o user atual.
 
-Utilizei também lógica de props no styled componets, para rendezição condicional de cores, além de outras lógicas de renderização condicionais como demonstrado no projeto, afim de renderizar modais.
-16
-​
-17
-Todo o projeto foi feito em ReactJS + TypeScript, utilzando conceitos de Componentização, Pages e Styled Components, Routas e Rota protegida ademais concatenando o uso de ferramentas como Figma, GitHub e libs como React Toast e etc. </p>
+Como linha de raciocinio adotada, as instruçõs diziam: <p style='color: #ff0c24'>"Para as implementações da tela abaixo, esperamos alguns requisitos:
+A aplicação precisa ser desenvolvida em ReactJs
+Todas as informações de formulário deverão ser armazenadas em um contexto para a exibição como mostrado na última tela
+A biblioteca para estilização é de livre escolha
+Todos os campos deverão possuir validações.
+O teste deverá ser entregue com o link para o repositório do Github" </p>
+
+<p>Baseado nas informações passadas e nas imagens do Figma, realizei uma página de entrada da empresa, que ao clicar, leva ao cadastro do user, em maior analise, notei que o projeto abre margem de interpretação, podendo ou não cadastrar mais de um usúario, contudo é notado que na pagina de renderização do cadastro, mostra sempre 1 card, que é o realizado pela propria pessoa, assim implementei uma lógica onde pego somente o user atual.
+
+Utilizei também lógica de props no styled componets, para rendezição condicional de cores, além de outras lógicas de renderização condicionais como demonstrado no projeto, afim de renderizar modais.</p>
+
+<p>Todo o projeto foi feito em ReactJS + TypeScript, utilzando conceitos de Componentização, Pages e Styled Components, Routas e Rota protegida ademais concatenando o uso de ferramentas como Figma, GitHub e libs como React Toast e etc.</p></p>
 
 </details>
 
