@@ -18,16 +18,19 @@ const AboutYouModal = () => {
     formState: { errors },
   } = useForm<IUser>({ resolver: yupResolver(schema) });
 
-  const { setNext, setLoading } = useContext(UserContext);
+  const { createNewUser, setNext, setLoading, userList, setUserList, user } = useContext(UserContext);
   
   const navigate = useNavigate();
 
-  function Return() {
+  function returnLastPage() {
       setNext("register");
   }
 
-  function EndRegister() {
+  function endRegister(data: IUser) {
+    createNewUser(data)
+    setUserList([...userList, user ])
     setLoading(false)
+    navigate("/dashboard")
     toast.success("Conta criada com sucesso!", {
       position: "top-right",
       autoClose: 5000,
@@ -37,18 +40,17 @@ const AboutYouModal = () => {
       draggable: true,
       progress: undefined,
     });
-    navigate("/dashboard")
   }
 
   return (
-    <ContainerAY onSubmit={handleSubmit(EndRegister)}>
+    <ContainerAY onSubmit={handleSubmit(endRegister)}>
       <label htmlFor="cep" className="labelMaisInfo">
       Nos conte mais sobre você
       </label>
       <input type="text" id="maisInfo" {...register("maisInfo")} />
       <span>{errors.maisInfo?.message}</span>
       <div className="ContainerButtons">
-        <button onClick={() => Return()} type="button" className="btn1">Anterior</button>
+        <button onClick={() => returnLastPage()} type="button" className="btn1">Anterior</button>
         <button type="submit" className="btn2">Finalizar</button>
       </div>
     </ContainerAY>

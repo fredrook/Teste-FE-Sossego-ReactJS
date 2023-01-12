@@ -6,17 +6,30 @@ import { IUser } from "../interfaces/IUser";
 export const UserContext = createContext<IProviderProps>({} as IProviderProps);
 
 const AuthContext = ({ children }: IContextProvider) => {
-  const [user, setUser] = useState<IUser[]>({} as IUser[]);
+  const [user, setUser] = useState<IUser>({} as IUser);
+
+  const [userList, setUserList] = useState([] as IUser[]);
 
   const [next, setNext] = useState("");
 
-  const [register, setIsRegister] = useState(false);
-
   const [loading, setLoading] = useState(true);
+
+  function createNewUser(userInput: IUser) {
+    setUser({ ...user, ...userInput });
+  }
 
   return (
     <UserContext.Provider
-      value={{ user, loading, setLoading, next, setNext, register, setIsRegister }}
+      value={{
+        user,
+        loading,
+        setLoading,
+        next,
+        setNext,
+        createNewUser,
+        userList,
+        setUserList,
+      }}
     >
       {children}
     </UserContext.Provider>

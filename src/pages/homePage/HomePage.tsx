@@ -2,7 +2,6 @@ import { useNavigate } from "react-router-dom";
 import { Home } from "./HomePageCSS";
 
 function HomePage() {
-
   const navigate = useNavigate();
 
   const Sossego = require("../../assets/Sossego.png");

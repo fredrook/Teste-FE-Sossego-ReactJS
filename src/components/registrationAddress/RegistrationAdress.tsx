@@ -18,13 +18,16 @@ const schema = yup.object({
 
 const RegistrationAdressModal = () => {
   const {
-    register, handleSubmit,
+    register,
+    handleSubmit,
     formState: { errors },
   } = useForm<IUser>({ resolver: yupResolver(schema) });
 
-   const { setNext } = useContext(UserContext);
+  const { createNewUser, setNext } = useContext(UserContext);
 
-  function Another() {
+  function anotherPage(data: IUser) {
+    createNewUser(data);
+    setNext("aboutyou");
     toast.success("Sucesso, próximo passo!", {
       position: "top-right",
       autoClose: 5000,
@@ -34,16 +37,14 @@ const RegistrationAdressModal = () => {
       draggable: true,
       progress: undefined,
     });
-    setNext("aboutyou");
   }
 
   function Back() {
     setNext("");
   }
 
-
   return (
-    <ContainerRA onSubmit={handleSubmit(Another)}>
+    <ContainerRA onSubmit={handleSubmit(anotherPage)}>
       <label htmlFor="cep" className="labelCep">
         CEP
       </label>
@@ -75,8 +76,12 @@ const RegistrationAdressModal = () => {
       <input type="text" id="pontoRef" {...register("pontoRef")} />
       <span>{errors.pontoRef?.message}</span>
       <div className="ContainerButtons">
-        <button type="button" onClick={() => Back()} className="btn1">Anterior</button>
-        <button type="submit" className="btn2">Próximo passo</button>
+        <button type="button" onClick={() => Back()} className="btn1">
+          Anterior
+        </button>
+        <button type="submit" className="btn2">
+          Próximo passo
+        </button>
       </div>
     </ContainerRA>
   );
