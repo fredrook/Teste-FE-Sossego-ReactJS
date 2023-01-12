@@ -16,7 +16,7 @@ A biblioteca para estilização é de livre escolha
 Todos os campos deverão possuir validações.
 O teste deverá ser entregue com o link para o repositório do Github" </p>
 
-<p>Baseado nas informações passadas e nas imagens do Figma, realizei uma página de entrada da empresa, que ao clicar, leva ao cadastro do user, em maior analise, notei que o projeto abre margem de interpretação, podendo ou não cadastrar mais de um usúario, contudo é notado que na pagina de renderização do cadastro, mostra sempre 1 card, que é o realizado pela propria pessoa, assim implementei uma lógica onde pego somente o user atual.
+<p>Baseado nas informações passadas e nas imagens do Figma, realizei uma página de entrada da empresa, que ao clicar, leva ao cadastro do user, em maior analise, notei que o projeto abre margem de interpretação, podendo ou não cadastrar mais de um usúario, contudo é notado que na pagina de renderização do cadastro, mostra sempre 1 card, que é o realizado pela propria pessoa, assim implementei uma lógica onde pego somente o user atual, contudo a página resposavel por renderizar o card do contendo as infos do user, está em uma rota protegida, somente sendo possivel acessar apos cadastro, caso tente acessar via link diretamente, será encaminhado ao bloqueio.
 
 Utilizei também lógica de props no styled componets, para rendezição condicional de cores, além de outras lógicas de renderização condicionais como demonstrado no projeto, afim de renderizar modais.</p>
 
