@@ -29,7 +29,9 @@ const ProtectedRoutes = () => {
           alt="Imagem acesso negado, com referência ao filme Senhor dos Aneis."
           className="accessDenied"
         />
-        <h1>Olá, você precisa ter um usúario criado para ter acesso a está página!</h1>
+        <h1>
+          Olá, você precisa ter um usúario criado para ter acesso a está página!
+        </h1>
       </DivProtected>
     );
   }

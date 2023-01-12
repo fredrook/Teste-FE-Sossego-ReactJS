@@ -9,7 +9,7 @@ interface IPropsUserValue {
 const CardUsers = ({ userValue }: IPropsUserValue) => {
   const navigate = useNavigate();
 
-  function Beginning() {
+  function beginning() {
     navigate("/")
   }
   return (
@@ -27,7 +27,7 @@ const CardUsers = ({ userValue }: IPropsUserValue) => {
         <span className="span4">{userValue.numero}</span>
         <p className="p5">CEP</p>
         <span className="span5">{userValue.cep}</span>
-        <button onClick={() => Beginning()}>Novo usúario</button>
+        <button onClick={() => beginning()}>Novo usúario</button>
       </TagDiv>
     </TagLi>
   );

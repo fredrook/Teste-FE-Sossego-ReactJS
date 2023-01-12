@@ -1,19 +1,16 @@
 import { useContext } from "react";
 import CardUsers from "../../components/cardUsers/CardUsers";
 import { UserContext } from "../../context/AuthContext";
-import { IUser } from "../../interfaces/IUser";
 import { ContainerDashb } from "./DashboardCSS";
 
 const Dashboard = () => {
-  const { user } = useContext(UserContext);
+  const { userList } = useContext(UserContext);
 
   return (
-    <ContainerDashb >
-      <div className="divSubContainer" >
+    <ContainerDashb>
+      <div className="divSubContainer">
         <ul>
-          {user.map((elem: IUser, index: number) => (
-            <CardUsers key={index} userValue={elem} />
-          ))}
+          <CardUsers userValue={userList[userList.length - 1]} />
         </ul>
       </div>
     </ContainerDashb>

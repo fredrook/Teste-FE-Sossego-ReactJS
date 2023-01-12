@@ -33,13 +33,16 @@ const schema = yup.object({
 
 const UserIdentificationModal = () => {
   const {
-    register, handleSubmit,
+    register,
+    handleSubmit,
     formState: { errors },
   } = useForm<IUser>({ resolver: yupResolver(schema) });
 
-  const { setNext } = useContext(UserContext);
+  const { createNewUser, setNext } = useContext(UserContext);
 
-  function NextOne() {
+  function nextPage(data: IUser) {
+    createNewUser(data);
+    setNext("register");
     toast.success("Sucesso, próximo passo!", {
       position: "top-right",
       autoClose: 5000,
@@ -49,12 +52,10 @@ const UserIdentificationModal = () => {
       draggable: true,
       progress: undefined,
     });
-    setNext("register");
-    
   }
 
   return (
-    <ContainerUI onSubmit={handleSubmit(NextOne)}>
+    <ContainerUI onSubmit={handleSubmit((data) => nextPage(data))}>
       <label htmlFor="name" className="labelName">
         Nome
       </label>
