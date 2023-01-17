@@ -11,7 +11,7 @@ const schema = yup.object({
   cep: yup.string().required("Cep obrigatório!"),
   rua: yup.string().required("Rua obrigatório!"),
   numero: yup.string().required("Número obrigatório!"),
-  bairro: yup.string().required(),
+  bairro: yup.string().required("Bairro é obrigatório!"),
   cidade: yup.string().required("Cidade obrigatório!"),
   pontoRef: yup.string(),
 });
@@ -49,27 +49,27 @@ const RegistrationAdressModal = () => {
         CEP
       </label>
       <input type="text" id="cep" {...register("cep")} />
-      <span>{errors.cep?.message}</span>
+      <span className="Error1">{errors.cep?.message}</span>
       <label htmlFor="rua" className="labelRua">
         Rua
       </label>
       <input type="text" id="rua" {...register("rua")} />
-      <span>{errors.rua?.message}</span>
+      <span className="Error2">{errors.rua?.message}</span>
       <label htmlFor="numero" className="labelNumero">
         Número
       </label>
       <input type="text" id="numero" {...register("numero")} />
-      <span>{errors.numero?.message}</span>
+      <span className="Error3">{errors.numero?.message}</span>
       <label htmlFor="bairro" className="labelBairro">
         Bairro
       </label>
       <input type="text" id="bairro" {...register("bairro")} />
-      <span>{errors.bairro?.message}</span>
+      <span className="Error4">{errors.bairro?.message}</span>
       <label htmlFor="cidade" className="labelCidade">
         Cidade
       </label>
       <input type="text" id="cidade" {...register("cidade")} />
-      <span>{errors.cidade?.message}</span>
+      <span className="Error5">{errors.cidade?.message}</span>
       <label htmlFor="pontoRef" className="labelPontoReferencia">
         Ponto de Referência
       </label>

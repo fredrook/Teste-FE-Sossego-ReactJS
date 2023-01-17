@@ -50,6 +50,31 @@ export const ContainerUI = styled.form`
     border: none;
     border-radius: 4px;
   }
+
+  .Error1 {
+    position: relative;
+    left: 43%;
+    top: 3.5%;
+    font-size: 12px;
+    color: red;
+    font-weight: 500;
+  }
+  .Error2 {
+    position: relative;
+    left: 2%;
+    top: 18%;
+    font-size: 12px;
+    color: red;
+    font-weight: 500;
+  }
+  .Error3 {
+    position: relative;
+    left: 67.5%;
+    top: -32%;
+    font-size: 12px;
+    color: red;
+    font-weight: 500;
+  }
 `;
 
 export const DivInputs = styled.div`
@@ -152,7 +177,7 @@ export const AnotherDivInputs = styled.div`
     display: flex;
     flex-direction: column;
 
-    width: 20%;
+    width: 21%;
 
     position: relative;
     top: -72%;
@@ -177,5 +202,21 @@ export const AnotherDivInputs = styled.div`
 
     border: none;
     border-radius: 4px;
+  }
+  .Error4 {
+    position: relative;
+    left: 12.5%;
+    top: -12%;
+    font-size: 12px;
+    color: red;
+    font-weight: 500;
+  }
+  .Error5 {
+    position: relative;
+    left: 64.5%;
+    top: -62%;
+    font-size: 12px;
+    color: red;
+    font-weight: 500;
   }
 `;

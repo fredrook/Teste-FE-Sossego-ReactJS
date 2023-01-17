@@ -60,14 +60,14 @@ const UserIdentificationModal = () => {
         Nome
       </label>
       <input type="text" id="name" {...register("name")} />
-      <span>{errors.name?.message}</span>
+      <span className="Error1">{errors.name?.message}</span>
 
       <DivInputs>
         <label htmlFor="password" className="labelPassword">
           Senha
         </label>
         <input type="password" id="password" {...register("password")} />
-        <span>{errors.password?.message}</span>
+        <span className="Error2">{errors.password?.message}</span>
         <label htmlFor="confirmPassword" className="labelConfPassword">
           Confirmar Senha
         </label>
@@ -76,7 +76,7 @@ const UserIdentificationModal = () => {
           id="confirmPassword"
           {...register("confirmPassword")}
         />
-        <span>{errors.confirmPassword?.message}</span>
+        <span className="Error3">{errors.confirmPassword?.message}</span>
       </DivInputs>
 
       <AnotherDivInputs>
@@ -84,7 +84,7 @@ const UserIdentificationModal = () => {
           Email
         </label>
         <input type="text" id="email" {...register("email")} />
-        <span>{errors.email?.message}</span>
+        <span className="Error4">{errors.email?.message}</span>
         <label htmlFor="DataNascimento" className="labelDataNascimento">
           Data de Nascimento
         </label>
@@ -93,7 +93,7 @@ const UserIdentificationModal = () => {
           id="DataNascimento"
           {...register("dataNascimento")}
         />
-        <span>{errors.dataNascimento?.message}</span>
+        <span className="Error5">{errors.dataNascimento?.message}</span>
       </AnotherDivInputs>
 
       <button type="submit" className="btnNext">
