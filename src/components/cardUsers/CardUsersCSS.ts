@@ -80,31 +80,32 @@ justify-content: space-evenly;
   .span1 {
     position: relative;
     top: 9%;
-    left: -37%;
+    left: -16.5%;
   }
 
   .span2 {
     position: relative;
     top: 4%;
-    left: -36.2%;
+    left: -9.2%;
   }
 
   .span3 {
     position: relative;
     top: 0%;
-    left: -38%;
+    left: -6%;
+    width: 370px;
   }
 
   .span4 {
     position: relative;
     top: -16%;
-    left: 31.5%;
+    left: 26.5%;
   }
 
   .span5 {
     position: relative;
     top: -20%;
-    left: -36.5%;
+    left: -32.5%;
   }
 
   .separacao {

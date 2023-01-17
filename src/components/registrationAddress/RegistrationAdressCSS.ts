@@ -10,6 +10,47 @@ export const ContainerRA = styled.form`
   position: relative;
   top: 18%;
 
+  .Error1 {
+    position: relative;
+    left: 17%;
+    top: 2.5%;
+    font-size: 12px;
+    color: red;
+    font-weight: 500;
+  }
+  .Error2 {
+    position: relative;
+    left: 71%;
+    top: -14%;
+    font-size: 12px;
+    color: red;
+    font-weight: 500;
+  }
+  .Error3 {
+    position: relative;
+    left: 4%;
+    top: -6.5%;
+    font-size: 12px;
+    color: red;
+    font-weight: 500;
+  }
+  .Error4 {
+    position: relative;
+    left: 30%;
+    top: -22.5%;
+    font-size: 12px;
+    color: red;
+    font-weight: 500;
+  }
+  .Error5 {
+    position: relative;
+    left: 71%;
+    top: -37%;
+    font-size: 12px;
+    color: red;
+    font-weight: 500;
+  }
+
   .labelCep {
     position: relative;
     top: 0%;
@@ -62,7 +103,7 @@ export const ContainerRA = styled.form`
     border-radius: 4px;
   }
 
-  .labelNumero {  
+  .labelNumero {
     position: relative;
     top: -9%;
     left: 0%;
@@ -92,7 +133,6 @@ export const ContainerRA = styled.form`
     position: relative;
     top: -24%;
     left: 25%;
-
 
     font-weight: 500;
     font-size: 16px;
